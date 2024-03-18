@@ -1,0 +1,20 @@
+<div class="login-container">
+    <div class="logo">
+        <img src="assets/logo.png" />
+    </div>
+    <h2>Login</h2>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" formControlName="username" id="username" placeholder="Enter your username">
+        <div *ngIf="submitted && validate('username')" class="error">Username is required</div>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" formControlName="password" id="password" placeholder="Enter your password">
+        <div *ngIf="submitted && validate('password')" class="error">Password is required</div>
+      </div>
+      <button type="submit">Login</button>
+    </form>
+  </div>
+  

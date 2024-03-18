@@ -1,0 +1,19 @@
+<div class="info-container">
+    <h2>Token Data</h2>
+    
+      @if(tokenData){  
+        @for(token of tokenData; track token) {
+
+        <ng-container >
+            <p><span>Name:</span> {{ token.name }}</p>
+            <p><span>Total Supply:</span> {{ token.totalSupply }}</p>
+            <p><span>Circulating Supply:</span> {{ token.circulatingSupply }}</p>
+            <p><span>Token Address:</span> {{ token.address }}</p>
+            
+            <p><span>Amount:</span> {{ token.totalAmount }}</p>
+          </ng-container>
+      }
+    }
+      <button class="update-button" (click)="updateToken()">Update Token</button>
+  
+  </div>
